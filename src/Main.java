@@ -22,16 +22,16 @@ public class Main {
         //Задание 3
 
         int bananas = 5;
+        int bananasWeight = 80;
         int milk = 200;
+        int milkWeight = 105;
         int iceCream = 2;
+        int iceCreamWeight = 100;
         int rawEggs = 4;
+        int rawEggsWeight = 70;
         int grPerKg = 1000;
-        int bananasGrams = bananas * 80;
-        int milkGrams = milk * 105 /100;
-        int iceCreamGrams = iceCream * 100;
-        int rawEggsGrams = rawEggs * 70;
-        int totalGrams = bananasGrams + milkGrams + iceCreamGrams + rawEggsGrams;
-        float totalKilograms = totalGrams / grPerKg;
+        int totalGrams = (bananas * bananasWeight) + (milk * milkWeight /100) + (iceCream * iceCreamWeight) + (rawEggs * rawEggsWeight);
+        double totalKilograms = (double) totalGrams / grPerKg;
         System.out.println("Общее количество в граммах = " + totalGrams);
         System.out.println("Общее количество в килограммах = " + totalKilograms);
 
@@ -39,9 +39,9 @@ public class Main {
         int weightLossKilogram = 7;
         int losesGram_1 = 250;
         int losesGram_2 = 500;
-        float daysLosesGram_250 = weightLossKilogram * grPerKg / losesGram_1;
-        float daysLosesGram_500 = weightLossKilogram * grPerKg / losesGram_2;
-        float averageDays = (daysLosesGram_500 + daysLosesGram_250) / 2;
+        int daysLosesGram_250 = weightLossKilogram * grPerKg / losesGram_1;
+        int daysLosesGram_500 = weightLossKilogram * grPerKg / losesGram_2;
+        double averageDays = (daysLosesGram_500 + daysLosesGram_250) / (2 * 1.0);
         System.out.println("Дней потрачено, если терять по 250 гр = " + daysLosesGram_250 + "; Дней потрачено, если терять по 500 гр = " + daysLosesGram_500);
         System.out.println("Среднее количество дней = " + averageDays);
 
@@ -51,9 +51,10 @@ public class Main {
         int incomeKristina = 76230;
         int monthsYear = 12;
         int plusPercentage = 10;
-        double newIncomeMaria = (incomeMaria * 100) / 90;
-        double newIncomeDenis = (incomeDenis * 100) / 90;
-        double newIncomeKristina = (incomeKristina * 100) / 90;
+        double multiplier = plusPercentage / (100 * 1.0);
+        int newIncomeMaria = (int) (incomeMaria + (incomeMaria * multiplier));
+        int newIncomeDenis = (int) (incomeDenis + (incomeDenis * multiplier));
+        int newIncomeKristina = (int) (incomeKristina + (incomeKristina * multiplier));
         double differenceIncomeMaria = (newIncomeMaria - incomeMaria) * monthsYear;
         double differenceIncomeDenis = (newIncomeDenis - incomeDenis) * monthsYear;
         double differenceIncomeKristina = (newIncomeKristina - incomeKristina) * monthsYear;
