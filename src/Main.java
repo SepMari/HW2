@@ -43,6 +43,7 @@ public class Main {
         float daysLosesGram_500 = weightLossKilogram * grPerKg / losesGram_2;
         float averageDays = (daysLosesGram_500 + daysLosesGram_250) / 2;
         System.out.println("Дней потрачено, если терять по 250 гр = " + daysLosesGram_250 + "; Дней потрачено, если терять по 500 гр = " + daysLosesGram_500);
+        System.out.println("Среднее количество дней = " + averageDays);
 
         //Задание 5
         int incomeMaria = 67760;
